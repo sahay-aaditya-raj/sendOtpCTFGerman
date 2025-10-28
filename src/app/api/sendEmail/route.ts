@@ -59,7 +59,7 @@ export async function POST(request: Request) {
           </div>
         `;
 
-        // await sendEmail(email, subject || "CTFd Notification", plainText, emailHtml);
+        await sendEmail(email, subject || "CTFd Notification", plainText, emailHtml);
         console.log("Email sending temporarily disabled.");
 
         return withCors(NextResponse.json({ success: true, message: "Mail sent" }));
